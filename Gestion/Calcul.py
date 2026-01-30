@@ -1,18 +1,18 @@
-def calcul(elo_principale:float, elo_adverse:float):
+def calcul(elo_principal:float, elo_adverse:float):
     
     if elo_principal < elo_adverse:
         diference = elo_adverse - elo_principal
-        return 10 + diference / 20
+        return float(10 + diference / 20)
     
     if elo_principal > elo_adverse:
         diference = elo_principal - elo_adverse
-        point = 10 - diference/50
+        point = float(10 - diference/50)
 
         if point <= 0:
-            return 1
+            return 1.0
 
         else:
-            return point
+            return float(point)
 
     if elo_principale == elo_adverse:
-        return 10
+        return 10.0
