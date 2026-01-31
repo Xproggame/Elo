@@ -14,5 +14,5 @@ def calcul(elo_principal:float, elo_adverse:float):
         else:
             return float(point)
 
-    if elo_principale == elo_adverse:
+    if elo_principal == elo_adverse:
         return 10.0

@@ -21,7 +21,10 @@ class Gestion_joueur:
 
         file.close()
 
-    def modification_elo(self, nom_joueur:str, elo_joueur:float, elo_adverse:float, victoire:bin):
+    def modification_elo(self, nom_joueur:str, joueur_adverse:str, victoire:bin):
+        elo_joueur = self.list_joueur.get(nom_joueur)
+        elo_adverse = self.list_joueur.get(joueur_adverse)
+
         point = calcul(elo_joueur, elo_adverse)
 
         if victoire:
