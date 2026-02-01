@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter.messagebox import askyesno
-from Gestion.Gestion_joueur import *
+from Gestion.Gestion_fichier import *
 from InterfaceGraphique.Partie import *
 
 gestion = Gestion_joueur()
@@ -45,3 +45,6 @@ def recup_joueur(joueur1:str, joueur2:str, win:Tk):
         enregistrement(win, joueur1)
         enregistrement(win, joueur2)
         partie(gestion, joueur1, joueur2)
+
+def sauvegarde():
+    gestion.validation_modification()

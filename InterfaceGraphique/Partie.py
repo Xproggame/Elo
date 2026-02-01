@@ -1,5 +1,5 @@
 from tkinter import *
-from Gestion.Gestion_joueur import *
+from Gestion.Gestion_fichier import *
 
 def partie(gestion:Gestion_joueur, joueur1:str, joueur2:str):
 
@@ -22,12 +22,12 @@ def partie(gestion:Gestion_joueur, joueur1:str, joueur2:str):
             gestion.modification_elo(joueur1, joueur2, False)
             gestion.modification_elo(joueur2, joueur1, True)
 
-        win.quit()
+        win.destroy()
 
     win = Tk()
 
-    Label(win, text=joueur1, bg='green').pack(side=LEFT, padx=10)
-    Label(win, text=joueur2, bg='green').pack(side=RIGHT, padx=10)
+    Label(win, text=f"{joueur1} ({gestion.list_joueur.get(joueur1)})", bg='green').pack(side=LEFT, padx=10)
+    Label(win, text=f"{joueur2} ({gestion.list_joueur.get(joueur2)})", bg='green').pack(side=RIGHT, padx=10)
 
     Button(win, text="1-0", command=victoire).pack(pady=10)
     Button(win, text="0-1", command=defaite).pack(pady=10)

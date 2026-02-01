@@ -38,4 +38,14 @@ partie_label2.pack()
 valider_bouton = Button(partie_frame_top, text="valider", command=nom_joueur)
 valider_bouton.pack(side=BOTTOM)
 
+# barre d'outils
+
+barre = Menu(win)
+
+onglet = Menu(barre, tearoff=0)
+onglet.add_command(label="Sauvegarder", command=sauvegarde)
+barre.add_cascade(label="Fichier", menu=onglet)
+
+win.config(menu=barre)
+
 win.mainloop()
