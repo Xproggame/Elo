@@ -47,5 +47,6 @@ onglet.add_command(label="Sauvegarder", command=sauvegarde)
 barre.add_cascade(label="Fichier", menu=onglet)
 
 win.config(menu=barre)
+win.title("Elo")
 
 win.mainloop()

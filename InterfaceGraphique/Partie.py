@@ -33,4 +33,6 @@ def partie(gestion:Gestion_joueur, joueur1:str, joueur2:str):
     Button(win, text="0-1", command=defaite).pack(pady=10)
     Button(win, text="nul", command=nul).pack(pady=10)
 
+    win.title(f"Partie : {joueur1} contre {joueur2}")
+
     win.mainloop()
